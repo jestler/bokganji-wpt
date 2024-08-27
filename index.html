@@ -27,39 +27,54 @@
             padding: 0;
             margin: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
 
         nav ul li {
-            margin: 0 1.5rem;
+            margin: 0.5rem 0;
         }
 
         nav ul li a {
             color: #333;
             text-decoration: none;
             font-weight: 600;
+            padding: 0.8rem 1.2rem;
+            border: 2px solid #ff5a5f;
+            border-radius: 5px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: #ff5a5f;
+            color: #fff;
+        }
+
+        nav ul li a:hover {
+            background-color: #e34d4f;
+            border-color: #e34d4f;
         }
 
         main {
-            padding: 2rem;
+            padding: 1.5rem;
             text-align: center;
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
             color: #ff5a5f;
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #555;
+            margin-bottom: 2rem;
         }
 
         footer {
             background-color: #fff;
             color: #555;
-            padding: 1.5rem;
+            padding: 1rem;
             text-align: center;
             border-top: 1px solid #e6e6e6;
         }
@@ -75,28 +90,56 @@
             text-decoration: none;
             font-weight: 600;
         }
+
+        /* Responsive design adjustments */
+        @media (min-width: 600px) {
+            nav ul {
+                flex-direction: row;
+            }
+
+            nav ul li {
+                margin: 0 1rem;
+            }
+
+            nav ul li a {
+                padding: 0.6rem 1rem;
+                width: auto;
+            }
+
+            main {
+                padding: 2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>텍사스 홀덤 교육 게임</h1>
-        <nav>
-            <ul>
-                <li><a href="#">홈</a></li>
-                <li><a href="#">핸드 랭킹 퀴즈</a></li>
-                <li><a href="#">핸드 승률 연습</a></li>
-                <li><a href="#">베팅 전략 연습</a></li>
-                <li><a href="#">실전 게임</a></li>
-                <li><a href="#">종합 복습</a></li>
-            </ul>
-        </nav>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">핸드 랭킹 퀴즈</a></li>
+            <li><a href="#">핸드 승률 연습</a></li>
+            <li><a href="#">베팅 전략 연습</a></li>
+            <li><a href="#">실전 게임</a></li>
+            <li><a href="#">종합 복습</a></li>
+        </ul>
+    </nav>
     <main>
         <h2>환영합니다!</h2>
         <p>이 앱에서는 텍사스 홀덤의 기본 규칙과 전략을 배울 수 있습니다.</p>
     </main>
     <footer>
-        <p>&copy; 2024 <a href="#">탱크니횽 v1.0</a>. All rights reserved.</p>
+        <p>&copy; 2024 <a href="#">탱크니횽v1.1</a>. All rights reserved.</p>
     </footer>
 </body>
 </html>
