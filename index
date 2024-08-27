@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍사스 홀덤 교육 게임</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>텍사스 홀덤 교육 게임</h1>
+        <nav>
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">핸드 랭킹 퀴즈</a></li>
+                <li><a href="#">핸드 승률 연습</a></li>
+                <li><a href="#">베팅 전략 연습</a></li>
+                <li><a href="#">실전 게임</a></li>
+                <li><a href="#">종합 복습</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>환영합니다!</h2>
+        <p>이 앱에서는 텍사스 홀덤의 기본 규칙과 전략을 배울 수 있습니다.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 텍사스 홀덤 교육</p>
+    </footer>
+</body>
+</html>
