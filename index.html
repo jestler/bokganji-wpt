@@ -106,22 +106,6 @@
             padding-left: 20px;
         }
 
-        .toggle-button {
-            background-color: #ff5a5f;
-            color: #fff;
-            border: none;
-            padding: 0.8rem 1.2rem;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            transition: background-color 0.3s;
-        }
-
-        .toggle-button:hover {
-            background-color: #e34d4f;
-        }
-
         footer {
             background-color: #fff;
             color: #555;
@@ -174,7 +158,7 @@
 </head>
 <body>
     <div class="banner">
-        <a href="https://www.youtube.com/channel/UCl9wnStlU5q-BMBHAmzWFxQ" target="_blank">유튜브 채널 바로가기</a>
+        <a href="https://www.youtube.com/channel/UCl9wnStlU5q-BMBHAmzWFxQ" target="_blank">탱크니횽 채널 바로가기</a>
     </div>
     <header>
         <h1>텍사스 홀덤 교육 게임</h1>
@@ -187,14 +171,12 @@
             <li><a href="#">베팅 전략 연습</a></li>
             <li><a href="#">실전 게임</a></li>
             <li><a href="#">종합 복습</a></li>
+            <li><a href="#" onclick="toggleRules()">텍사스 홀덤 기본 규칙 보기</a></li> <!-- 규칙 보기 버튼을 리스트로 추가 -->
         </ul>
     </nav>
     <main>
         <h2>환영합니다!</h2>
         <p>이 앱에서는 텍사스 홀덤의 기본 규칙과 전략을 배울 수 있습니다.</p>
-
-        <!-- 규칙 보기 버튼 -->
-        <button class="toggle-button" onclick="toggleRules()">텍사스 홀덤 기본 규칙 보기</button>
 
         <!-- 텍사스 홀덤 기본 규칙 섹션 -->
         <div class="rules" id="rules">
