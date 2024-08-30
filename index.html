@@ -22,6 +22,19 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
+        .banner {
+            background-color: #ff5a5f;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .banner a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
         nav ul {
             list-style-type: none;
             padding: 0;
@@ -33,20 +46,20 @@
 
         nav ul li {
             margin: 0.5rem 0;
+            width: 90%; /* 버튼 너비를 일관되게 유지 */
         }
 
         nav ul li a {
-            color: #333;
+            color: #fff;
             text-decoration: none;
             font-weight: 600;
-            padding: 0.8rem 1.2rem;
+            padding: 0.8rem 0;
             border: 2px solid #ff5a5f;
             border-radius: 5px;
-            display: block;
-            width: 100%;
-            text-align: center;
             background-color: #ff5a5f;
-            color: #fff;
+            width: 100%;
+            display: block;
+            text-align: center;
         }
 
         nav ul li a:hover {
@@ -69,6 +82,27 @@
             font-size: 1rem;
             color: #555;
             margin-bottom: 2rem;
+        }
+
+        .rules {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .rules h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .rules ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
 
         footer {
@@ -95,10 +129,12 @@
         @media (min-width: 600px) {
             nav ul {
                 flex-direction: row;
+                justify-content: center;
             }
 
             nav ul li {
-                margin: 0 1rem;
+                margin: 0 0.5rem;
+                width: auto;
             }
 
             nav ul li a {
@@ -121,6 +157,9 @@
     </style>
 </head>
 <body>
+    <div class="banner">
+        <a href="https://www.youtube.com/channel/UCl9wnStlU5q-BMBHAmzWFxQ" target="_blank">유튜브 채널 바로가기</a>
+    </div>
     <header>
         <h1>텍사스 홀덤 교육 게임</h1>
     </header>
@@ -137,9 +176,28 @@
     <main>
         <h2>환영합니다!</h2>
         <p>이 앱에서는 텍사스 홀덤의 기본 규칙과 전략을 배울 수 있습니다.</p>
+        
+        <!-- 텍사스 홀덤 기본 규칙 섹션 -->
+        <div class="rules">
+            <h3>텍사스 홀덤 기본 규칙</h3>
+            <ul>
+                <li>**게임 시작**: 각 플레이어는 2장의 개인 카드를 받습니다.</li>
+                <li>**베팅 라운드**:
+                    <ul>
+                        <li>프리플랍: 첫 번째 베팅 라운드가 개인 카드가 분배된 후 시작됩니다.</li>
+                        <li>플랍: 테이블에 3장의 공용 카드가 공개되며, 두 번째 베팅 라운드가 시작됩니다.</li>
+                        <li>턴: 네 번째 공용 카드가 추가로 공개되고 세 번째 베팅 라운드가 진행됩니다.</li>
+                        <li>리버: 다섯 번째이자 마지막 공용 카드가 공개되며 마지막 베팅 라운드가 진행됩니다.</li>
+                    </ul>
+                </li>
+                <li>**쇼다운**: 모든 베팅이 끝나면 남은 플레이어들은 자신의 카드를 공개하여 가장 높은 핸드를 가진 사람이 승리합니다.</li>
+                <li>**핸드 구성**: 각 플레이어는 자신의 2장 카드와 테이블의 5장 카드 중 5장을 조합하여 가장 높은 핸드를 구성합니다.</li>
+                <li>**핸드 랭킹**: 로얄 플러시, 스트레이트 플러시, 포카드, 풀 하우스, 플러시 등 핸드의 순위를 기억하는 것이 중요합니다.</li>
+            </ul>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 <a href="#">탱크니횽v1.1</a>. All rights reserved.</p>
+        <p>&copy; 2024 <a href="#">탱크니횽</a>. All rights reserved.</p>
     </footer>
 </body>
 </html>
