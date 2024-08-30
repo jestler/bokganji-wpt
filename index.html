@@ -46,7 +46,7 @@
 
         nav ul li {
             margin: 0.5rem 0;
-            width: 90%; /* 버튼 너비를 일관되게 유지 */
+            width: 90%;
         }
 
         nav ul li a {
@@ -85,9 +85,10 @@
         }
 
         .rules {
+            display: none; /* 기본적으로 숨김 */
             text-align: left;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 1rem auto;
             padding: 1rem;
             background-color: #fff;
             border-radius: 8px;
@@ -103,6 +104,22 @@
         .rules ul {
             list-style-type: disc;
             padding-left: 20px;
+        }
+
+        .toggle-button {
+            background-color: #ff5a5f;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-button:hover {
+            background-color: #e34d4f;
         }
 
         footer {
@@ -125,7 +142,6 @@
             font-weight: 600;
         }
 
-        /* Responsive design adjustments */
         @media (min-width: 600px) {
             nav ul {
                 flex-direction: row;
@@ -176,13 +192,16 @@
     <main>
         <h2>환영합니다!</h2>
         <p>이 앱에서는 텍사스 홀덤의 기본 규칙과 전략을 배울 수 있습니다.</p>
-        
+
+        <!-- 규칙 보기 버튼 -->
+        <button class="toggle-button" onclick="toggleRules()">텍사스 홀덤 기본 규칙 보기</button>
+
         <!-- 텍사스 홀덤 기본 규칙 섹션 -->
-        <div class="rules">
+        <div class="rules" id="rules">
             <h3>텍사스 홀덤 기본 규칙</h3>
             <ul>
-                <li>**게임 시작**: 각 플레이어는 2장의 개인 카드를 받습니다.</li>
-                <li>**베팅 라운드**:
+                <li><strong>게임 시작</strong>: 각 플레이어는 2장의 개인 카드를 받습니다.</li>
+                <li><strong>베팅 라운드</strong>:
                     <ul>
                         <li>프리플랍: 첫 번째 베팅 라운드가 개인 카드가 분배된 후 시작됩니다.</li>
                         <li>플랍: 테이블에 3장의 공용 카드가 공개되며, 두 번째 베팅 라운드가 시작됩니다.</li>
@@ -190,14 +209,25 @@
                         <li>리버: 다섯 번째이자 마지막 공용 카드가 공개되며 마지막 베팅 라운드가 진행됩니다.</li>
                     </ul>
                 </li>
-                <li>**쇼다운**: 모든 베팅이 끝나면 남은 플레이어들은 자신의 카드를 공개하여 가장 높은 핸드를 가진 사람이 승리합니다.</li>
-                <li>**핸드 구성**: 각 플레이어는 자신의 2장 카드와 테이블의 5장 카드 중 5장을 조합하여 가장 높은 핸드를 구성합니다.</li>
-                <li>**핸드 랭킹**: 로얄 플러시, 스트레이트 플러시, 포카드, 풀 하우스, 플러시 등 핸드의 순위를 기억하는 것이 중요합니다.</li>
+                <li><strong>쇼다운</strong>: 모든 베팅이 끝나면 남은 플레이어들은 자신의 카드를 공개하여 가장 높은 핸드를 가진 사람이 승리합니다.</li>
+                <li><strong>핸드 구성</strong>: 각 플레이어는 자신의 2장 카드와 테이블의 5장 카드 중 5장을 조합하여 가장 높은 핸드를 구성합니다.</li>
+                <li><strong>핸드 랭킹</strong>: 로얄 플러시, 스트레이트 플러시, 포카드, 풀 하우스, 플러시 등 핸드의 순위를 기억하는 것이 중요합니다.</li>
             </ul>
         </div>
     </main>
     <footer>
         <p>&copy; 2024 <a href="#">탱크니횽</a>. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleRules() {
+            var rules = document.getElementById('rules');
+            if (rules.style.display === 'none' || rules.style.display === '') {
+                rules.style.display = 'block';
+            } else {
+                rules.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
